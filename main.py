@@ -45,9 +45,10 @@ LOG_EVENT_TYPES = [
 app = FastAPI()
 
 # ─── Healthcheck ───────────────────────────────────────────────────────────────
-@app.get("/", response_class=JSONResponse)
+@app.api_route("/", methods=["GET", "HEAD"], response_class=JSONResponse)
 async def index_page():
     return {"message": "AI Concierge is running"}
+
 
 # ─── Incoming Call: Capture CallSid & start Media Stream ─────────────────────
 @app.api_route("/incoming-call", methods=["GET","POST"])
