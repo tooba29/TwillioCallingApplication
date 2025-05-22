@@ -5,6 +5,7 @@ from twilio.twiml.voice_response import VoiceResponse, Connect
 from twilio.rest import Client
 from dotenv import load_dotenv
 from urllib.parse import parse_qs
+print(f"🔍 Websockets version in use: {websockets.__version__}")
 
 # ─── Load configuration ────────────────────────────────────────────────────────
 load_dotenv()
