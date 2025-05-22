@@ -1,6 +1,6 @@
 fastapi 
 uvicorn 
 python-dotenv 
-websockets 
+websockets>=11.0
 twilio
 python-multipart
